@@ -51,22 +51,22 @@ function my_keydown(e)
     //Escribe el codigo si keypressed es up (arriba). El valor ASCIII para "arriba" es 38.
 		if(keyPressed=='40')
          {
-            down()
+            down();
             console.log("abajo");
          }
         if(keyPressed=='38')
          {
-            up()
+            up();
             console.log("arriba")
          }
          if(keyPressed=='37')
          {
-            left()
+            left();
             console.log("izquierda")
          }
          if(keyPressed=='39')
          {
-            right()
+            right();
             console.log("derecha")
          }
     
@@ -83,16 +83,40 @@ function my_keydown(e)
 }
 
 function up(){
-
+   if(rover_y>=0);
+   {
+   rover_y=rover_y-10;
+   console.log("Flecha arriba x=" + rover_x + "y=" + rover_y);
+   uploadBackground();
+   uploadrover();
+   }
 }
 function down(){
-	
+   if(rover_y<=500);
+   {
+   rover_y=rover_y+10;
+   console.log("Flecha abajo x=" + rover_x + "y=" + rover_y);
+   uploadBackground();
+   uploadrover();
+   }
 }
 function right(){
-	
+	if(rover_x<=700);
+{
+rover_x=rover_x+10;
+console.log("Flecha derecha x=" + rover_x + "y=" + rover_y);
+uploadBackground();
+uploadrover();
+}
 }
 function left(){
-	
+   if(rover_x>=0);
+{
+rover_x=rover_x-10;
+console.log("Flecha izquierda x=" + rover_x + "y=" + rover_y);
+uploadBackground();
+uploadrover();
+}	
 }
 
 
