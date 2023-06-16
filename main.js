@@ -1,12 +1,19 @@
 canvas = document.getElementById('myCanvas');
 ctx = canvas.getContext("2d");
 
+mars_images_array=["marte_1.jpg", "marte_2.jpg", "marte_3.jpg", "marte_4.jpg"];
+random_number=Math.floor(Math.random()*4);
+console.log(random_number);
+
+
+
 //Define el ancho y alto de la imagen del explorador.
 rover_whidth=100;
 rover_height=90;
 
 
-background_image = "mars.jpg";
+background_image = mars_images_array[random_number];
+console.log("background_image" + background_image);
 
 rover_image = "rover.png";
 
@@ -16,7 +23,7 @@ rover_y = 10;
 //Crea la función "add()"
  function add() {
    background_imgTag=new Image();
-   background_imgTag.uploadBackground;
+   background_imgTag.onload=uploadBackground;
    background_imgTag.src=background_image; 
  
    rover_imgTag=new Image();
